@@ -5,4 +5,4 @@ if [[ -z "$FILE" ]]; then
 	return 1
 fi
 
-awk -F, '{ print $1; print "{ \"code\": 200, \"message\": \"OK\", \"data\": { \"country\": { \"code\" : \"" $1 "\" } } }" > "html/" $1 ".json" }' $FILE
+awk -F, '{ print $1; print "{ \"code\": 200, \"message\": \"OK\", \"data\": { \"country\": { \"code\" : \"" $1 "\" } } }" > $1 ".json" }' $FILE
